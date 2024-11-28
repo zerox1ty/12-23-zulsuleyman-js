@@ -1,0 +1,266 @@
+button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: #1454b5;
+  border: 1px solid #1454b5;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: 0.3s ease-in;
+}
+
+button,
+button span,
+button p,
+.button,
+.button span,
+.button p {
+  color: #fff;
+  font-weight: 500;
+}
+
+button:hover,
+.button:hover {
+  background: #0963eb;
+  border: 1px solid #0963eb;
+
+}
+
+.danger {
+  background: #e02222;
+  border: 1px solid #e02222;
+}
+
+.danger:hover {
+  background: #cc0606;
+  border: 1px solid #cc0606;
+}
+
+.outline {
+  background: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+.container--full {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Burger menu */
+:root {
+    --header-height: 5rem;
+    --header-padding-inline: 2rem;
+  }
+  
+  .burger {
+    position: fixed;
+    right: 0;
+    top: var(--header-height);
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    background-color: #313131;
+    transition: transform 0.5s;
+  }
+  
+  .burger__content {
+    padding-block: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    padding-inline: var(--header-padding-inline);
+  }
+  
+  .burger.open {
+    transform: translateX(0);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-inline: var(--header-padding-inline);
+    height: var(--header-height);
+  }
+  
+  .logotype {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .burger__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url(./modal.css);
+@import url(./button.css);
+@import url(./profile.css);
+@import url(./text.css);
+@import url(./container.css);
+@import url(./header.css);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background: #000000;
+  color: rgb(119, 119, 119);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+  position: relative;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal__buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .buttons>button {
+    max-width: 10rem;
+  }
+  
+  .modal.open {
+    display: block;
+  }
+  
+  .modal__content {
+    border-radius: 1rem;
+    background-color: #1c1c1c;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    animation: slide-down 0.3s ease-out;
+  }
+  
+  .modal__close {
+    color: #adadad;
+    float: right;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal__close:hover,
+  .modal__close:focus {
+    color: #dddddd;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes slide-down {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .profile {
+    padding-top: 3rem;
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  .danger-zone {
+    margin-top: 2rem;
+    border-top: 1px solid #3d3d3d;
+    padding-top: 1rem;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1000px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar img {
+    height: 100%;
+    width: 120%;
+  }
+  
+  .profile__info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  a {
+    color: #0f5bce;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

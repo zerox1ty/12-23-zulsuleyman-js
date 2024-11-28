@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/style.css">
+  <script src="public/js/script.js" defer></script>
+  <title>pr2.1</title>
+</head>
+
+<body>
+  <header class="container--full">
+    <h1 class="logotype">Hollywood Stars</h1>
+    <button class="burger__button" onclick="triggerBurger(event)">
+      <img src="public/img/menu.svg" alt="icon">
+    </button>
+  </header>
+
+  <main>
+    <div class="burger">
+      <div class="container--full burger__content">
+        <ul class="burger__nav-list">
+          <li>
+            <a href="#">
+              Main 
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Learn
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Google
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="profile">
+      <div class="container profile__content">
+        <h1>Profile</h1>
+        <div class="profile__item">
+          <div class="profile__info">
+            <div class="avatar">
+              <img class="avatar__inner"
+                src="public/img/skala.png" alt="avatar">
+            </div>
+            <div>
+              <p>Dwayne "Rock" Johnson</p>
+              <p>many y.o.</p>
+            </div>
+          </div>
+        </div>
+        <div class="profile__item danger-zone">
+          <h2>Dont touch it</h2>
+          <button class="danger" onclick="openModal()">
+            <img src="public/img/delete_forever.svg" alt="icon">
+            <span>Delete profile?</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="myModal" class="modal">
+    <div class="modal__content">
+      <span class="modal__close" onclick="closeModal()">&#x2715;</span>
+      <h3>You dont have permissions for that, but anyway try it!</h3>
+      <div class="modal__buttons">
+        <button onclick="closeModal()">Back</button>
+        <button class="danger outline" onclick="deleteUser(event, '5', 'e#J$#IFE3u423ef')">Delete</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
